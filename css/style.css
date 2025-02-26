@@ -1,0 +1,109 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+h1,
+h2,
+h3 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 800;
+  color: #cbd5e1;
+}
+p {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  color: white;
+}
+h4 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  color: #cbd5e1;
+}
+/*-------------------------------------------------------------------Main-container------------------------------------*/
+.main-container {
+  background: #1e293b;
+  height: 100%;
+  width: 100%;
+}
+.circle {
+  width: 20px;
+  height: 20px;
+  background: white;
+  border-radius: 50%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none; /* Prevent interaction */
+}
+/*-----------------------------------------------------------Home-Page----------------------------------------------*/
+.home-page {
+  height: 100%;
+  width: 100%;
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 10vh;
+  padding: 5vh;
+  position: sticky;
+  top: 0;
+  width: 100%;
+}
+nav h2 {
+  border: 2px solid black;
+  background-color: rgba(0, 0, 0, 0.705);
+}
+.menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+.burger {
+  color: white;
+}
+.linkedin {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+.linkedin a {
+  color: white;
+}
+.menu h4 {
+  background-color: black;
+  border-radius: 20px;
+  padding: 6px 10px;
+}
+/*-------------------------------------------------------Home-Page-Media-Quesries-----------------------------------*/
+@media (max-width: 425px) {
+  .menu h4 {
+    display: none;
+  }
+  .circle {
+    display: none;
+  }
+}
+/*---------------------------------------------------About-Page--------------------------------------------------------*/
+.about-page {
+  padding: 30px;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.main {
+  height: 95%;
+  width: 95%;
+  background-color: #1e293b;
+  border-radius: 10px;
+}
