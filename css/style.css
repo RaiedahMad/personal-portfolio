@@ -3,34 +3,20 @@
   padding: 0;
   box-sizing: border-box;
 }
+
 html,
 body {
   width: 100%;
   height: 100%;
 }
-h1,
-h2,
-h3 {
-  font-family: "Poppins", sans-serif;
-  font-weight: 800;
-  color: #cbd5e1;
-}
-p {
-  font-family: "Poppins", sans-serif;
-  font-weight: 400;
-  color: white;
-}
-h4 {
-  font-family: "Poppins", sans-serif;
-  font-weight: 600;
-  color: #cbd5e1;
-}
-/*-------------------------------------------------------------------Main-container------------------------------------*/
+
+/*-------------------------------------------Main-container------------------------------------*/
 .main-container {
-  background: #1e293b;
+  background: #0e141b;
   height: 100%;
   width: 100%;
 }
+
 .circle {
   width: 20px;
   height: 20px;
@@ -39,51 +25,138 @@ h4 {
   position: fixed;
   top: 0;
   left: 0;
+  z-index: 1000;
   pointer-events: none; /* Prevent interaction */
 }
-/*-----------------------------------------------------------Home-Page----------------------------------------------*/
+
+/*---------------------------------------Home-Page-----------------------------------------*/
 .home-page {
   height: 100%;
   width: 100%;
 }
+
 nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 10vh;
-  padding: 5vh;
+  padding: 2vh 3vw;
   position: sticky;
   top: 0;
   width: 100%;
 }
+
 nav h2 {
+  color: #fdfeff;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
   border: 2px solid black;
   background-color: rgba(0, 0, 0, 0.705);
 }
+
 .menu {
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 10px;
 }
+
 .burger {
   color: white;
 }
+
 .linkedin {
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 10px;
 }
+
+.linkedin h4 {
+  color: #fdfeff;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+}
+
 .linkedin a {
   color: white;
 }
+
 .menu h4 {
   background-color: black;
   border-radius: 20px;
   padding: 6px 10px;
+  color: #fdfeff;
 }
-/*-------------------------------------------------------Home-Page-Media-Quesries-----------------------------------*/
+
+.name {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding-bottom: 100px;
+}
+
+.name1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.letter {
+  opacity: 0;
+  font-size: 7rem;
+  color: #fdfeff;
+}
+
+.name h2 {
+  font-size: 7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  position: relative;
+  color: white;
+  -webkit-text-stroke: 1px #040000;
+  z-index: 1;
+  font-family: "Poppins", sans-serif;
+  margin-top: 30px;
+}
+
+.name h2::before {
+  position: absolute;
+  bottom: -2px;
+  right: -4px;
+  color: white;
+}
+
+.name h4 {
+  font-size: 3rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  position: relative;
+  color: rgb(0, 0, 0);
+  -webkit-text-stroke: 1px #040000;
+  z-index: 1;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  margin-bottom: 30px;
+}
+
+.name h4::before {
+  position: absolute;
+  content: "FRONT-END DEVELOPER";
+  bottom: -2px;
+  right: -4.5px;
+  color: #e1e1e1;
+}
+
+.name p {
+  color: white;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-weight: 600;
+}
+
+/*----------------------------------Home-Page-Media-Quesries-----------------------------------*/
 @media (max-width: 425px) {
   .menu h4 {
     display: none;
@@ -91,19 +164,102 @@ nav h2 {
   .circle {
     display: none;
   }
+  .name h2 {
+    font-size: 2.9rem;
+  }
+  .name h2::before {
+    bottom: -2px;
+    right: -2.5px;
+  }
+  .name h4 {
+    font-size: 1.6rem;
+    margin-bottom: 0px;
+  }
+  .name h4::before {
+    bottom: -1px;
+    right: -2.5px;
+  }
+  .name p {
+    text-align: center;
+    font-size: 400;
+  }
+  .letter {
+    font-size: 2.5rem;
+  }
 }
-/*---------------------------------------------------About-Page--------------------------------------------------------*/
+/*----------------------About-Page--------------------------------------------------------*/
 .about-page {
-  padding: 30px;
   height: 100%;
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: #0e141b;
 }
+
 .main {
-  height: 95%;
-  width: 95%;
-  background-color: #1e293b;
-  border-radius: 10px;
+  height: 100%;
+  width: 100%;
+  border-radius: 20px;
+  display: flex;
 }
+
+.intro-text {
+  color: #fdfeff;
+  font-weight: 400;
+  font-family: "Poppins", sans-serif;
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.intro-text p {
+  margin-left: 80px;
+  text-align: center;
+}
+
+.image {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image img {
+  height: 350px;
+  width: 300px;
+  transform: rotate(-5deg);
+  transition: transform 0.3s ease;
+}
+
+.image img:hover {
+  transform: rotate(0deg);
+}
+
+/*----------------------About-Page-MEdia-Queries-------------------------------------------*/
+@media (max-width: 425px) {
+  .main {
+    flex-direction: column;
+  }
+  .intro-text {
+    color: #fdfeff;
+    font-size: 0.7rem;
+    padding: 10px;
+    width: 100%;
+  }
+  .image {
+    width: 100%;
+  }
+  .image img {
+    height: 230px;
+    width: 180px;
+    margin: 20px;
+  }
+  .intro-text p {
+    margin: 0px 20px;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
