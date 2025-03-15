@@ -91,17 +91,20 @@ nav h2 {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  padding-bottom: 100px;
+  padding-bottom: 50px;
 }
 .name1 {
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
+  margin-right: 80px;
 }
 .letter {
   opacity: 0;
   font-size: 7rem;
   color: $color-primary;
+  overflow: hidden;
 }
 .name h2 {
   font-size: 7rem;
@@ -177,6 +180,10 @@ nav h2 {
   .letter {
     font-size: 2.5rem;
   }
+  .name1 {
+    margin-right: 30px;
+    overflow: hidden;
+  }
 }
 /*----------------------About-Page--------------------------------------------------------*/
 .about-page {
@@ -207,6 +214,15 @@ nav h2 {
   margin-left: 80px;
   text-align: center;
 }
+.about-container {
+  display: flex;
+  justify-content: center;
+  font-size: 40px;
+  font-weight: $font-weight-medium;
+  font-family: $font-primary;
+  color: $color-tertiary;
+}
+
 .image {
   width: 50%;
   display: flex;
@@ -215,7 +231,7 @@ nav h2 {
 }
 .image img {
   height: 350px;
-  width: 300px;
+  width: 280px;
   transform: rotate(-5deg);
   transition: transform 0.3s ease;
 }
@@ -244,5 +260,81 @@ nav h2 {
   }
   .intro-text p {
     margin: 0px 20px;
+  }
+}
+
+//  ------------------------------------skill-section-css------------------------------------
+.skill-section {
+  height: 100%;
+  width: 100%;
+  background-color: $bg-color-primary;
+  padding-top: 40px;
+}
+.words-container {
+  display: flex;
+  justify-content: center;
+  font-size: 4rem;
+  font-weight: $font-weight-medium;
+  font-family: $font-primary;
+  color: $color-tertiary;
+}
+.skill-container p {
+  color: $color-primary;
+  font-family: $font-primary;
+  font-weight: $font-weight-regular;
+  font-size: 1rem;
+  text-align: center;
+}
+.skill-box-1 {
+  display: flex;
+  justify-content: space-around;
+  gap: 50px;
+  margin-top: 50px;
+}
+.core-skill {
+  display: flex;
+  justify-content: space-around;
+  gap: 50px;
+}
+.skill-head {
+  font-size: 2rem;
+  font-weight: $font-weight-medium;
+  font-family: $font-primary;
+  color: $color-primary;
+}
+.skill-name {
+  font-size: 1.5rem;
+  font-weight: $font-weight-medium;
+  font-family: $font-primary;
+  color: $color-primary;
+  background-color: $color-tertiary;
+  padding: 10px 20px;
+  border-radius: 10px;
+}
+.core-skill {
+  width: 50%;
+}
+//  ------------------------------------skill-section-css-media-queries------------------------------------
+@media (max-width: 425px) {
+  .skill-section {
+    padding-top: 40px;
+  }
+  .skill-box-1 {
+    flex-direction: column;
+    margin-top: 0px;
+  }
+  .skill-head {
+    font-size: 1.5rem;
+    text-align: center;
+    margin-top: 20px;
+  }
+  .skill-name {
+    font-size: 1rem;
+    text-align: center;
+  }
+  .core-skill {
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+    width: 100%;
   }
 }
