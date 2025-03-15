@@ -46,11 +46,11 @@ nav {
 }
 
 nav h2 {
-  color: #fdfeff;
+  color: #2563eb;
   font-family: "Poppins", sans-serif;
-  font-weight: 600;
+  font-weight: 800;
   border: 2px solid black;
-  background-color: rgba(0, 0, 0, 0.705);
+  background-color: #fdfeff;
 }
 
 .menu {
@@ -72,9 +72,10 @@ nav h2 {
 }
 
 .linkedin h4 {
-  color: #fdfeff;
+  color: #2563eb;
   font-family: "Poppins", sans-serif;
-  font-weight: 400;
+  font-weight: 600;
+  font-size: 1.5rem;
 }
 
 .linkedin a {
@@ -82,10 +83,11 @@ nav h2 {
 }
 
 .menu h4 {
-  background-color: black;
+  background-color: #fdfeff;
   border-radius: 20px;
   padding: 6px 10px;
-  color: #fdfeff;
+  color: #2563eb;
+  font-weight: 600;
 }
 
 .name {
@@ -362,58 +364,280 @@ nav h2 {
   .skill-section {
     padding: 80px 40px;
   }
-
   .skill-box {
     gap: 70px;
   }
 }
-
 @media (max-width: 767px) {
   .skill-section {
     padding: 40px 20px;
   }
-
   .skill-box-1 {
     gap: 20px;
   }
-
   .core-skill {
     gap: 15px;
     padding: 0 10px;
   }
-
   .skill-name {
     padding: 8px 16px;
   }
 }
-
 @media (max-width: 480px) {
   .skill-section {
     padding: 30px 15px;
   }
-
   .words-container {
     margin-bottom: 15px;
   }
-
   .skill-container p {
     margin-bottom: 30px;
     padding: 0 10px;
   }
-
   .skill-box {
     gap: 40px;
     padding: 10px;
   }
-
   .core-skill {
     gap: 10px;
   }
-
   .skill-name {
     padding: 6px 12px;
     min-width: 90px;
     text-align: center;
+  }
+}
+/*----------------------Project-Section--------------------------------------------------------*/
+.project-container {
+  min-height: 100vh;
+  width: 100%;
+  background-color: #0e141b;
+  padding: 60px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.project-container h2 {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 600;
+  font-family: "Poppins", sans-serif;
+  color: #2563eb;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.project-box {
+  max-width: 1200px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+  padding: 20px;
+}
+
+.project-box-1,
+.project-box-2 {
+  background: rgba(37, 99, 235, 0.1);
+  border: 1px solid #2563eb;
+  border-radius: 15px;
+  padding: 30px;
+  width: 100%;
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-box-1:hover,
+.project-box-2:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(37, 99, 235, 0.2);
+}
+
+.project-box-1 h3,
+.project-box-2 h3 {
+  font-size: clamp(1.5rem, 2.5vw, 2rem);
+  font-weight: 600;
+  font-family: "Poppins", sans-serif;
+  color: #fdfeff;
+}
+
+.project-box-1 p,
+.project-box-2 p {
+  font-size: clamp(0.9rem, 1.2vw, 1rem);
+  font-family: "Poppins", sans-serif;
+  color: #fdfeff;
+  opacity: 0.9;
+  line-height: 1.6;
+}
+
+.project-box-1 a,
+.project-box-2 a {
+  display: inline-block;
+  font-family: "Poppins", sans-serif;
+  color: #2563eb;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: clamp(0.9rem, 1.2vw, 1rem);
+  transition: color 0.3s ease;
+  margin-right: 20px;
+}
+
+.project-box-1 a:hover,
+.project-box-2 a:hover {
+  color: #fdfeff;
+}
+
+/* Project Section Media Queries */
+@media (min-width: 1200px) {
+  .project-container {
+    padding: 80px 40px;
+  }
+  .project-box {
+    gap: 60px;
+  }
+}
+@media (max-width: 991px) {
+  .project-container {
+    padding: 50px 30px;
+  }
+  .project-box {
+    gap: 30px;
+  }
+  .project-box-1,
+  .project-box-2 {
+    padding: 25px;
+  }
+}
+@media (max-width: 767px) {
+  .project-container {
+    padding: 40px 20px;
+  }
+  .project-box {
+    gap: 25px;
+    padding: 10px;
+  }
+  .project-box-1,
+  .project-box-2 {
+    padding: 20px;
+  }
+}
+@media (max-width: 480px) {
+  .project-container {
+    padding: 30px 15px;
+  }
+  .project-box {
+    gap: 20px;
+    padding: 5px;
+  }
+  .project-box-1,
+  .project-box-2 {
+    padding: 15px;
+  }
+  .project-box-1 a,
+  .project-box-2 a {
+    display: block;
+    margin-bottom: 10px;
+    text-align: center;
+    padding: 8px;
+    background: rgba(37, 99, 235, 0.1);
+    border-radius: 8px;
+  }
+}
+/*----------------------Footer-Section--------------------------------------------------------*/
+/*----------------------Footer-Section--------------------------------------------------------*/
+/*----------------------Footer-Section--------------------------------------------------------*/
+footer {
+  width: 100%;
+  background-color: #0e141b;
+  padding: 60px 20px;
+  border-top: 1px solid rgba(37, 99, 235, 0.3);
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 40px;
+  padding: 0 20px;
+}
+
+.footer-box {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.footer-box h2 {
+  color: #2563eb;
+  font-family: "Poppins", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.footer-box p {
+  color: #fdfeff;
+  font-family: "Poppins", sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.footer-box a {
+  color: #fdfeff;
+  font-family: "Poppins", sans-serif;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+  display: inline-block;
+  margin-bottom: 5px;
+}
+
+.footer-box a:hover {
+  color: #2563eb;
+}
+
+/* Footer Media Queries */
+@media (max-width: 991px) {
+  footer {
+    padding: 50px 20px;
+  }
+  .footer-container {
+    gap: 30px;
+  }
+}
+@media (max-width: 767px) {
+  .footer-container {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 25px;
+    padding: 0 10px;
+  }
+  .footer-box {
+    text-align: center;
+  }
+}
+@media (max-width: 480px) {
+  footer {
+    padding: 40px 15px;
+  }
+  .footer-container {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .footer-box {
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(37, 99, 235, 0.2);
+  }
+  .footer-box:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+  .footer-box h2 {
+    font-size: 1.3rem;
   }
 }
 
