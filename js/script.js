@@ -88,3 +88,63 @@ gsap.from(".word", {
     scrub: 2,
   },
 });
+// Mobile Menu Functionality
+const mobileMenu = document.querySelector(".mobile-menu");
+const mobileNav = document.querySelector(".mobile-nav");
+const navLinks = document.querySelectorAll(".nav-links a, .mobile-nav a");
+
+// Toggle mobile menu
+mobileMenu.addEventListener("click", () => {
+  mobileNav.style.display = "block";
+  setTimeout(() => {
+    mobileNav.classList.toggle("active");
+  }, 10);
+});
+
+// Close mobile menu when clicking a link
+navLinks.forEach((link) => {
+  link.addEventListener("click", () => {
+    mobileNav.classList.remove("active");
+    setTimeout(() => {
+      mobileNav.style.display = "none";
+    }, 300);
+  });
+});
+
+// Smooth scrolling for navigation links
+document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+  anchor.addEventListener("click", function (e) {
+    e.preventDefault();
+    const target = document.querySelector(this.getAttribute("href"));
+    if (target) {
+      const navHeight = document.querySelector("nav").offsetHeight;
+      const targetPosition =
+        target.getBoundingClientRect().top + window.pageYOffset - navHeight;
+
+      window.scrollTo({
+        top: targetPosition,
+        behavior: "smooth",
+      });
+    }
+  });
+});
+
+// Add active class to nav links on scroll
+window.addEventListener("scroll", () => {
+  const sections = document.querySelectorAll("section");
+  const navLinks = document.querySelectorAll(".nav-links a");
+
+  sections.forEach((section) => {
+    const sectionTop = section.offsetTop;
+    const sectionHeight = section.clientHeight;
+    if (window.pageYOffset >= sectionTop - 150) {
+      const id = section.getAttribute("id");
+      navLinks.forEach((link) => {
+        link.classList.remove("active");
+        if (link.getAttribute("href") === `#${id}`) {
+          link.classList.add("active");
+        }
+      });
+    }
+  });
+});
