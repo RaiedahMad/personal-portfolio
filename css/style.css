@@ -45,7 +45,7 @@ nav {
   width: 100%;
   background-color: rgba(14, 20, 27, 0.95);
   backdrop-filter: blur(10px);
-  z-index: 1000;
+  z-index: 999;
   border-bottom: 1px solid rgba(37, 99, 235, 0.1);
 }
 
@@ -234,25 +234,6 @@ nav h2:hover {
   overflow: hidden;
 }
 
-.name h2 {
-  font-size: 7rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  position: relative;
-  color: white;
-  -webkit-text-stroke: 1px #040000;
-  z-index: 1;
-  font-family: "Poppins", sans-serif;
-  margin-top: 30px;
-}
-
-.name h2::before {
-  position: absolute;
-  bottom: -2px;
-  right: -4px;
-  color: white;
-}
-
 .name h4 {
   font-size: 3rem;
   font-weight: 600;
@@ -275,10 +256,15 @@ nav h2:hover {
 }
 
 .name p {
-  color: white;
+  color: #2563eb;
   font-family: "Poppins", sans-serif;
   font-weight: 400;
   font-weight: 600;
+  transition: color 0.4s ease;
+}
+
+.name p:hover {
+  color: white;
 }
 
 /*----------------------------------Home-Page-Media-Quesries-----------------------------------*/
@@ -312,7 +298,7 @@ nav h2:hover {
     font-size: 2.5rem;
   }
   .name1 {
-    margin-right: 30px;
+    margin-right: 35px;
     overflow: hidden;
   }
 }
@@ -529,9 +515,10 @@ nav h2:hover {
 }
 /*----------------------Project-Section--------------------------------------------------------*/
 .project-container {
-  min-height: 100vh;
+  min-height: 100%;
   width: 100%;
   background-color: #0e141b;
+  padding-bottom: 120px;
   padding: 60px 20px;
   display: flex;
   flex-direction: column;
@@ -667,8 +654,6 @@ nav h2:hover {
     border-radius: 8px;
   }
 }
-/*----------------------Footer-Section--------------------------------------------------------*/
-/*----------------------Footer-Section--------------------------------------------------------*/
 /*----------------------Footer-Section--------------------------------------------------------*/
 footer {
   width: 100%;

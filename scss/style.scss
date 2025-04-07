@@ -50,7 +50,7 @@ nav {
   width: 100%;
   background-color: rgba(14, 20, 27, 0.95);
   backdrop-filter: blur(10px);
-  z-index: 1000;
+  z-index: 999;
   border-bottom: 1px solid rgba(37, 99, 235, 0.1);
 }
 nav h2 {
@@ -232,24 +232,6 @@ nav h2:hover {
   color: $color-primary;
   overflow: hidden;
 }
-.name h2 {
-  font-size: 7rem;
-  font-weight: $font-weight-medium;
-  text-transform: uppercase;
-  position: relative;
-  color: white;
-  -webkit-text-stroke: 1px #040000;
-  z-index: 1;
-  font-family: $font-primary;
-  margin-top: 30px;
-}
-.name h2::before {
-  position: absolute;
-  // content: "RAIED AHMAD";
-  bottom: -2px;
-  right: -4px;
-  color: white;
-}
 .name h4 {
   font-size: 3rem;
   font-weight: $font-weight-medium;
@@ -270,10 +252,14 @@ nav h2:hover {
   color: #e1e1e1;
 }
 .name p {
-  color: $color-secondary;
+  color: $color-tertiary;
   font-family: $font-primary;
   font-weight: 400;
   font-weight: $font-weight-medium;
+  transition: color 0.4s ease;
+}
+.name p:hover {
+  color: $color-secondary;
 }
 /*----------------------------------Home-Page-Media-Quesries-----------------------------------*/
 @media (max-width: 425px) {
@@ -285,7 +271,6 @@ nav h2:hover {
   }
   .name h2 {
     font-size: 2.9rem;
-    // margin-bottom: 10px;
   }
   .name h2::before {
     bottom: -2px;
@@ -307,7 +292,7 @@ nav h2:hover {
     font-size: 2.5rem;
   }
   .name1 {
-    margin-right: 30px;
+    margin-right: 35px;
     overflow: hidden;
   }
 }
@@ -534,9 +519,10 @@ nav h2:hover {
 // ... existing code ...
 /*----------------------Project-Section--------------------------------------------------------*/
 .project-container {
-  min-height: 100vh;
+  min-height: 100%;
   width: 100%;
   background-color: #0e141b;
+  padding-bottom: 120px;
   padding: 60px 20px;
   display: flex;
   flex-direction: column;
@@ -683,12 +669,7 @@ nav h2:hover {
     border-radius: 8px;
   }
 }
-// ... existing code ...
-// ... existing code ...
 
-/*----------------------Footer-Section--------------------------------------------------------*/
-// ... existing code ...
-/*----------------------Footer-Section--------------------------------------------------------*/
 /*----------------------Footer-Section--------------------------------------------------------*/
 footer {
   width: 100%;
